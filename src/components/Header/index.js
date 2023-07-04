@@ -22,28 +22,38 @@ const Header = props => {
           />
         </Link>
         <ul className="header-icons-container">
-          <Link to="/">
-            <li>
-              <AiFillHome className="icon" />
-            </li>
-          </Link>
-          <Link to="/jobs">
-            <li>
-              <BsFillBriefcaseFill className="icon" />
-            </li>
-          </Link>
           <li>
-            <FiLogOut className="icon" />
+            <Link to="/">
+              <AiFillHome className="icon" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/jobs">
+              <BsFillBriefcaseFill className="icon" />
+            </Link>
+          </li>
+          <li>
+            <button
+              type="button"
+              onClick={onClickLogoutButton}
+              className="logout-icon"
+            >
+              <FiLogOut className="icon" />
+            </button>
           </li>
         </ul>
-        <div className="options-container">
-          <Link to="/" className="link">
-            <p className="option home">Home</p>
-          </Link>
-          <Link to="/jobs" className="link">
-            <p className="option">Jobs</p>
-          </Link>
-        </div>
+        <ul className="options-container">
+          <li>
+            <Link to="/" className="link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/jobs" className="link">
+              Jobs
+            </Link>
+          </li>
+        </ul>
         <button
           type="button"
           className="logout-button"

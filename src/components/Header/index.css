@@ -37,22 +37,21 @@
 }
 .link {
   text-decoration: none;
+  color: #f1f5f9;
 }
 .options-container {
+  width: 100px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
   .options-container {
     display: none;
   }
-}
-.option {
-  font-family: 'Roboto';
-  font-size: 13px;
-  font-weight: 400;
-  color: #f1f5f9;
-  cursor: pointer;
 }
 .home {
   margin-right: 10px;

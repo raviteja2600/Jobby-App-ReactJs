@@ -140,10 +140,19 @@ class JobsPage extends Component {
   }
 
   onClickCheckbox = event => {
+    const {employmentType} = this.state
+    let updatedEmploymentTypeData
+    if (employmentType.includes(event.target.value)) {
+      updatedEmploymentTypeData = employmentType.filter(
+        each => each !== event.target.value,
+      )
+    } else {
+      updatedEmploymentTypeData = [...employmentType, event.target.value]
+    }
     this.setState(
-      prevState => ({
-        employmentType: [...prevState.employmentType, event.target.value],
-      }),
+      {
+        employmentType: updatedEmploymentTypeData,
+      },
       this.getUserProfileData,
     )
   }
@@ -331,6 +340,7 @@ class JobsPage extends Component {
     return (
       <div className="jobs-bg-container">
         <Header />
+
         <div className="jobs-container">
           <div className="search-container search-container-sm">
             <input

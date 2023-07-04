@@ -49,7 +49,7 @@ const salaryRangesList = [
 // Replace your code here
 const App = () => (
   <Switch>
-    <Route path="/login" component={LoginPage} />
+    <Route exact path="/login" component={LoginPage} />
     <ProtectedRoute exact path="/" component={Home} />
     <ProtectedRoute exact path="/jobs" component={JobsPage} />
     <ProtectedRoute exact path="/jobs/:id" component={JobItemDetailsPage} />

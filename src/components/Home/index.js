@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import Header from '../Header'
 import './index.css'
 
-const Home = props => (
+const Home = () => (
   <div className="home-bg-container">
     <Header />
     <div className="home-container">
